@@ -2,7 +2,6 @@
 ## Project setup
 
 - `cd workshop`
-- `git checkout master`
 - `source env/bin/activate`
 - `cd workshop`
 ## Start Develop
