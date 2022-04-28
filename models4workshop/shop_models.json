@@ -1,0 +1,154 @@
+[
+    {
+        "model": "backend.companies_shop",
+        "pk": 1,
+        "fields": {
+            "comp_name": "บริษัท A",
+            "comp_address": "บริษัท A"
+        }
+    },
+    {
+        "model": "backend.companies_shop",
+        "pk": 2,
+        "fields": {
+            "comp_name": "บริษัท B",
+            "comp_address": "บริษัท B"
+        }
+    },
+    {
+        "model": "backend.companies_shop",
+        "pk": 3,
+        "fields": {
+            "comp_name": "บริษัท C",
+            "comp_address": "บริษัท C"
+        }
+    },
+    {
+        "model": "backend.companies_shop",
+        "pk": 4,
+        "fields": {
+            "comp_name": "บริษัท D",
+            "comp_address": "บริษัท D"
+        }
+    },
+    {
+        "model": "backend.companies_shop",
+        "pk": 5,
+        "fields": {
+            "comp_name": "บริษัท E",
+            "comp_address": "บริษัท E"
+        }
+    },
+    {
+        "model": "backend.product_types",
+        "pk": 1,
+        "fields": {
+            "prod_type_name": "สัตว์เลี้ยง"
+        }
+    },
+    {
+        "model": "backend.product_types",
+        "pk": 2,
+        "fields": {
+            "prod_type_name": "เครื่องดื่ม"
+        }
+    },
+    {
+        "model": "backend.product_types",
+        "pk": 3,
+        "fields": {
+            "prod_type_name": "อาหาร"
+        }
+    },
+    {
+        "model": "backend.product_types",
+        "pk": 4,
+        "fields": {
+            "prod_type_name": "เครื่องแต่งกาย"
+        }
+    },
+    {
+        "model": "backend.product_types",
+        "pk": 5,
+        "fields": {
+            "prod_type_name": "เครื่องใช้ไฟฟ้า"
+        }
+    },
+    {
+        "model": "backend.products",
+        "pk": 1,
+        "fields": {
+            "prod_photo": "uploads/products_and_services_photos/cat.jpeg",
+            "prod_name": "cat",
+            "prod_desc": "cat",
+            "company_id": 1,
+            "product_types_id": 1
+        }
+    },
+    {
+        "model": "backend.products",
+        "pk": 2,
+        "fields": {
+            "prod_photo": "uploads/products_and_services_photos/dog.jpeg",
+            "prod_name": "dog",
+            "prod_desc": "dog",
+            "company_id": 2,
+            "product_types_id": 1
+        }
+    },
+    {
+        "model": "backend.products",
+        "pk": 3,
+        "fields": {
+            "prod_photo": "uploads/products_and_services_photos/greentea.jpg",
+            "prod_name": "greentea",
+            "prod_desc": "greentea",
+            "company_id": 3,
+            "product_types_id": 2
+        }
+    },
+    {
+        "model": "backend.products",
+        "pk": 4,
+        "fields": {
+            "prod_photo": "uploads/products_and_services_photos/padthai.webp",
+            "prod_name": "padthai",
+            "prod_desc": "padthai",
+            "company_id": 4,
+            "product_types_id": 3
+        }
+    },
+    {
+        "model": "backend.products",
+        "pk": 5,
+        "fields": {
+            "prod_photo": "uploads/products_and_services_photos/trousers.jpg",
+            "prod_name": "trousers",
+            "prod_desc": "trousers",
+            "company_id": 5,
+            "product_types_id": 4
+        }
+    },
+    {
+        "model": "backend.products",
+        "pk": 6,
+        "fields": {
+            "prod_photo": "uploads/products_and_services_photos/tshirt.webp",
+            "prod_name": "tshirt",
+            "prod_desc": "tshirt",
+            "company_id": 1,
+            "product_types_id": 4
+        }
+    },
+    {
+        "model": "backend.products",
+        "pk": 7,
+        "fields": {
+            "prod_photo": "uploads/products_and_services_photos/TV.webp",
+            "prod_name": "TV",
+            "prod_desc": "TV",
+            "company_id": 2,
+            "product_types_id": 5
+        }
+    }
+]
