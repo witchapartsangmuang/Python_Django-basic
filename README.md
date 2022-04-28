@@ -1,7 +1,6 @@
 # Python_Django-basic
 ## Project setup
-
-- `cd workshop`
+- `cd Python_Django-basic`
 - `source env/bin/activate`
 - `cd workshop`
 ## Start Develop
