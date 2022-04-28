@@ -1,0 +1,27 @@
+<ul class="nav nav-tabs">
+    <li class="nav-item">
+        <a class="nav-link active" aria-current="page" href="#">{{context.title}}</a>
+    </li>
+    <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
+            aria-expanded="false">contents</a>
+        <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="{% url 'frontend-index' %}">Index</a></li>
+            <li><a class="dropdown-item"
+                    href="{% url 'frontend-display_data_from_backend' %}">display_data_from_backend</a></li>
+            <li><a class="dropdown-item" href="{% url 'frontend-form_with_django' %}">frontend-form_with_django</a>
+            </li>
+            <li></li>
+            <li>
+                <hr class="dropdown-divider">
+            </li>
+            <li><a class="dropdown-item" href="#">Disabled</a></li>
+        </ul>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+    </li>
+</ul>

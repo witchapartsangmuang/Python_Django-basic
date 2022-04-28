@@ -1,0 +1,131 @@
+{% extends "frontend/layouts/main.html" %}
+{% block content %}
+
+<!-- include header -->
+{% include "frontend/layouts/header.html" %}
+<!-- content here -->
+<div class="container" style="height: 100%;">
+    <h3 style="text-align: center;">Model shop_models</h3>
+    <div id="accordionExample">
+        <!-- products model -->
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#products_model" aria-expanded="false" aria-controls="products_model">
+                    products_model
+                </button>
+            </h2>
+            <div id="products_model" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <form method="post" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        <div class="mb-3">
+                            <label for="disabledTextInput" class="form-label">prod_photo</label>
+                            <!-- <input type="file" name="prod_photo" class="form-control" placeholder="prod_photo"> -->
+                            {{form_productsForm.prod_photo}}
+                        </div>
+                        <div class="mb-3">
+                            <label for="disabledTextInput" class="form-label">prod_name</label>
+                            <!-- <input type="text" name="prod_name" class="form-control" placeholder="prod_name"> -->
+                            {{form_productsForm.prod_name}}
+                        </div>
+                        <div class="mb-3">
+                            <label for="disabledTextInput" class="form-label">prod_desc</label>
+                            <!-- <input type="text" name="prod_desc" class="form-control" placeholder="prod_desc"> -->
+                            {{form_productsForm.prod_desc}}
+                        </div>
+                        <div class="mb-3">
+                            <label for="disabledTextInput" class="form-label">product_types_id</label>
+                            {{form_productsForm.product_types_id}}
+                        </div>
+                        <div class="mb-3">
+                            <label for="disabledTextInput" class="form-label">company_id</label>
+                            {{form_productsForm.company_id}}
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- product_photos_model -->
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#product_photos_model" aria-expanded="false" aria-controls="product_photos_model">
+                    product_photos_model
+                </button>
+            </h2>
+            <div id="product_photos_model" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <form method="post" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        <div class="mb-3">
+                            <label for="disabledTextInput" class="form-label">multi_prod_photo</label>
+                            <!-- <input type="text" name="multi_prod_photo" class="form-control" placeholder="multi_prod_photo"> -->
+                            {{form_product_photosForm.multi_prod_photo}}
+                        </div>
+                        <div class="mb-3">
+                            <label for="disabledTextInput" class="form-label">product_id</label>
+                            {{form_product_photosForm.product_id}}
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- product_types_model -->
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#product_types_model" aria-expanded="false" aria-controls="product_types_model">
+                    product_types_model
+                </button>
+            </h2>
+            <div id="product_types_model" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <form method="post" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        <div class="mb-3">
+                            <label for="disabledTextInput" class="form-label">prod_type_name</label>
+                            <!-- <input type="text" name="prod_type_name" class="form-control" placeholder="prod_type_name"> -->
+                            {{form_product_typesForm.prod_type_name}}
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- companies_model -->
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#companies_model" aria-expanded="false" aria-controls="companies_model">
+                    companies_model
+                </button>
+            </h2>
+            <div id="companies_model" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <form method="post" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        <div class="mb-3">
+                            <label for="disabledTextInput" class="form-label">comp_name</label>
+                            <!-- <input type="text" name="comp_name" class="form-control" placeholder="comp_name"> -->
+                            {{form_companies_shopForm.comp_name}}
+                        </div>
+                        <div class="mb-3">
+                            <label for="disabledTextInput" class="form-label">comp_address</label>
+                            <!-- <input type="text" name="comp_address" class="form-control" placeholder="comp_address"> -->
+                            {{form_companies_shopForm.comp_address}}
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- include footer -->
+{% include "frontend/layouts/footer.html" %}
+
+{% endblock %}

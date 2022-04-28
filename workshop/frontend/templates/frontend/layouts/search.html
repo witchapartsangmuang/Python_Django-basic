@@ -1,0 +1,17 @@
+<div class="container">
+    <form action="{% url 'frontend-display_data_from_backend' %}" method="get" enctype="multipart/form-data">
+        search : <input type="text" name="search" value="{{search}}" placeholder="{{search}}"> &nbsp;
+        <select name="sort_by">
+            <option value="id" {% if sort_by == 'id' %} selected {% endif %}>id</option>
+            <option value="company_id" {% if sort_by == 'company_id' %} selected {% endif %}>company_id</option>
+            <option value="product_types_id" {% if sort_by == 'product_types_id' %} selected {% endif %}>product_types_id
+            </option>
+        </select>
+
+        <select name="order_by">
+            <option value="low" {% if order_by == 'low' %} selected {% endif %}>low</option>
+            <option value="high" {% if order_by == 'high' %} selected {% endif %}>high</option>
+        </select>
+        <button type="submit">find</button>
+    </form>
+</div>

@@ -1,0 +1,51 @@
+{% extends "frontend/layouts/main.html" %}
+{% block content %}
+<!-- include header -->
+{% include "frontend/layouts/header.html" %}
+
+
+<!-- content here -->
+<div class="container" style="height: 100%;">
+  <h1>edit</h1>
+  {% if data %}
+  <div class="card" style="width: 250px; height: 600px;">
+    <img src="/media/{{data.prod_photo}}" class="card-img-top">
+    <div class="card-body">
+      <form method="POST" enctype="multipart/form-data" action=" {% url 'frontend-edit_data' %}">
+        {% csrf_token %}
+        <p class="card-text"><input name="prod_id" style="width: 215px;" type="hidden" value="{{data.id}}"></p>
+        <h5 class="card-title">prod_name : <input name="prod_name" style="width: 215px;" type="text"
+            placeholder="{{data.prod_name}}" value="{{data.prod_name}}"></h5>
+        <p class="card-text">prod_desc : <input name="prod_desc" style="width: 215px;" type="text"
+            placeholder="{{data.prod_desc}}" value="{{data.prod_desc}}"></p>
+        <p class="card-text">
+          <select name="product_types_id">
+            {% for i in prod_type %}
+            {% if i == data.product_types_id %}
+            <option value='{{i.id}}' selected>{{i.prod_type_name}}</option>
+            {% endif %}
+            <option value='{{i.id}}'>{{i.prod_type_name}}</option>
+            {% endfor %}
+          </select>
+        </p>
+        <p class="card-text">
+          <select name="company_id">
+            {% for i in prod_comp_name %}
+            {% if i == data.company_id %}
+            <option value='{{i.id}}' selected>{{i.comp_name}}</option>
+            {% endif %}
+            <option value='{{i.id}}'>{{i.comp_name}}</option>
+            {% endfor %}
+          </select>
+        </p>
+        <button class="btn btn-primary" type="submit">edit</button>
+      </form>
+    </div>
+  </div>
+  {% endif %}
+</div>
+
+<!-- include footer -->
+{% include "frontend/layouts/footer.html" %}
+
+{% endblock %}
