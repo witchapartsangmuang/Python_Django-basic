@@ -34,3 +34,4 @@ class product_photos(models.Model):
         return str(self.product_id)
 
 # if you want to see your models in path('admin/', admin.site.urls), you need to call your models in admin.py
+# but dont forget makemigrations backend and migrate before.
