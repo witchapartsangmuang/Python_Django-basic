@@ -21,7 +21,7 @@ class products(models.Model):
     prod_photo = models.FileField(upload_to='uploads/products_and_services_photos/',null=True,blank=True)
     prod_name = models.CharField(max_length=50)
     prod_desc = models.CharField(max_length=255)
-    company_id = models.ForeignKey(companies_shop,related_name='product_types_companies_shop',null=True,blank=True,on_delete=models.PROTECT)
+    company_id = models.ForeignKey(companies_shop,related_name='products_companies_shop',null=True,blank=True,on_delete=models.PROTECT)
     product_types_id = models.ForeignKey(product_types,related_name='products_product_types',null=True,blank=True,on_delete=models.PROTECT)
     def __str__(self):
         return str(self.prod_name)
