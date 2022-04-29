@@ -4,7 +4,7 @@
 - `source env/bin/activate`
 - `cd workshop`
 ## Start Develop
-- `python3 manage.py makemigrations backend`
+- `python3 manage.py makemigrations`
 - `python3 manage.py migrate`
 - 
     ## init data
